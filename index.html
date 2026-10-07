@@ -1,54 +1,992 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Saad Farooq | Electrical Engineering</title>
+
 <style>
-:root{--bg:#070b12;--card:#101722cc;--text:#eef5ff;--muted:#94a3b8;--cyan:#65d9ff;--purple:#9a8cff;--line:#ffffff14}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 10% 0,#16364a55,transparent 30%),radial-gradient(circle at 90% 15%,#332b7050,transparent 28%),var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,-apple-system,Segoe UI,sans-serif}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(#fff1 1px,transparent 1px),linear-gradient(90deg,#fff1 1px,transparent 1px);background-size:45px 45px;mask-image:linear-gradient(#000,transparent 80%)}a{color:inherit;text-decoration:none}.nav{position:sticky;top:0;z-index:5;background:#070b12b8;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.navin{max-width:1080px;margin:auto;padding:15px 24px;display:flex;justify-content:space-between}.brand{font-weight:800;letter-spacing:.08em}.brand b{color:var(--cyan)}.links{display:flex;gap:24px;color:var(--muted);font-size:.9rem}.links a:hover{color:white}.hero,section{max-width:1080px;margin:auto;padding:90px 24px}.hero{min-height:72vh;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:60px}.eyebrow,.label{color:var(--cyan);text-transform:uppercase;letter-spacing:.15em;font-size:.75rem;font-weight:800}.hero h1{font-size:clamp(3.4rem,8vw,6.5rem);line-height:.9;letter-spacing:-.07em;margin:18px 0}.hero h1 span{background:linear-gradient(100deg,var(--cyan),var(--purple));color:transparent;background-clip:text}.hero p{max-width:680px;color:var(--muted);font-size:1.1rem}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:11px 17px;border:1px solid var(--line);border-radius:10px;background:#ffffff08;font-weight:700;transition:.2s}.btn:hover{transform:translateY(-2px);border-color:#65d9ff55}.primary{background:white;color:#080b11}.planet{width:270px;aspect-ratio:1;border-radius:50%;margin:auto;background:radial-gradient(circle at 30% 25%,#ffffff88 0 2%,transparent 3%),radial-gradient(circle at 38% 35%,#1c5068,#0b121e 62%,#070b12 73%);box-shadow:0 0 80px #65d9ff20,inset -35px -25px 70px #000b;position:relative}.planet:before,.planet:after{content:"";position:absolute;inset:12%;border:1px solid #65d9ff44;border-radius:50%;transform:rotate(25deg) scaleY(.34)}.planet:after{transform:rotate(-25deg) scaleY(.34)}h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.05em;margin:8px 0 28px}.grid2{display:grid;grid-template-columns:1.3fr .7fr;gap:18px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;backdrop-filter:blur(12px)}.card p{color:var(--muted);margin-bottom:0}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.tag{padding:7px 11px;border-radius:999px;border:1px solid #65d9ff22;background:#65d9ff08;color:#cdeeff;font-size:.84rem}.project{min-height:265px;transition:.2s}.project:hover{transform:translateY(-5px);border-color:#65d9ff44}.num{color:var(--cyan);font-weight:800;font-size:.75rem;letter-spacing:.12em}.project h3{margin:34px 0 5px}.tools{font-size:.78rem;color:#cbd5e1}.skills{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}.skill{padding:12px;border-left:2px solid var(--cyan);background:#ffffff05;color:var(--muted)}.skill strong{color:white}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}footer{max-width:1080px;margin:auto;padding:30px 24px 50px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#718096;font-size:.85rem}@media(max-width:800px){.links{display:none}.hero,.grid2,.two{grid-template-columns:1fr}.planet{width:200px}.cards{grid-template-columns:1fr}.hero{padding-top:65px}section{padding:65px 20px}}
-</style></head>
+:root{
+  --bg:#070b12;
+  --card:#101722cc;
+  --text:#eef5ff;
+  --muted:#94a3b8;
+  --cyan:#65d9ff;
+  --purple:#9a8cff;
+  --line:#ffffff14;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 15% 10%,#102d3d 0,transparent 30%),
+    radial-gradient(circle at 85% 20%,#241a45 0,transparent 28%),
+    var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.13;
+  background-image:
+    linear-gradient(#ffffff08 1px,transparent 1px),
+    linear-gradient(90deg,#ffffff08 1px,transparent 1px);
+  background-size:50px 50px;
+  mask-image:linear-gradient(to bottom,black,transparent 85%);
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(1100px,92%);
+  margin:auto;
+}
+
+/* NAV */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  backdrop-filter:blur(18px);
+  background:#070b12cc;
+  border-bottom:1px solid var(--line);
+}
+
+.nav-inner{
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-weight:800;
+  letter-spacing:-.03em;
+}
+
+.logo span{
+  color:var(--cyan);
+}
+
+.nav-links{
+  display:flex;
+  gap:28px;
+  font-size:.92rem;
+  color:var(--muted);
+}
+
+.nav-links a{
+  transition:.2s;
+}
+
+.nav-links a:hover{
+  color:var(--text);
+}
+
+/* HERO */
+
+.hero{
+  min-height:calc(100vh - 70px);
+  display:flex;
+  align-items:center;
+  position:relative;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:60px;
+  align-items:center;
+}
+
+.kicker{
+  color:var(--cyan);
+  font-family:monospace;
+  font-size:.85rem;
+  margin-bottom:18px;
+}
+
+h1{
+  font-size:clamp(3.2rem,7vw,6.5rem);
+  line-height:.95;
+  letter-spacing:-.065em;
+  max-width:800px;
+}
+
+.hero h1 span{
+  background:linear-gradient(100deg,var(--cyan),var(--purple));
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.hero-text{
+  color:var(--muted);
+  font-size:1.08rem;
+  max-width:650px;
+  margin-top:28px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:14px;
+  margin-top:34px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:11px 17px;
+  border:1px solid var(--line);
+  border-radius:9px;
+  font-size:.9rem;
+  transition:.2s;
+  background:#ffffff05;
+}
+
+.btn:hover{
+  border-color:#ffffff35;
+  transform:translateY(-2px);
+}
+
+.btn.primary{
+  background:linear-gradient(100deg,#65d9ff20,#9a8cff20);
+  border-color:#65d9ff55;
+}
+
+/* HERO GRAPHIC */
+
+.hero-graphic{
+  position:relative;
+  height:420px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.orbit{
+  width:310px;
+  height:310px;
+  border:1px solid #65d9ff25;
+  border-radius:50%;
+  position:relative;
+  animation:spin 22s linear infinite;
+}
+
+.orbit::before,
+.orbit::after{
+  content:"";
+  position:absolute;
+  inset:40px;
+  border:1px solid #9a8cff25;
+  border-radius:50%;
+}
+
+.orbit::after{
+  inset:90px;
+  border-color:#65d9ff25;
+}
+
+.core{
+  width:85px;
+  height:85px;
+  border-radius:50%;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  background:
+    radial-gradient(circle at 35% 30%,#ffffff,var(--cyan) 15%,#24495d 45%,#111827 70%);
+  box-shadow:
+    0 0 35px #65d9ff55,
+    0 0 90px #65d9ff20;
+}
+
+.node{
+  position:absolute;
+  width:12px;
+  height:12px;
+  background:var(--cyan);
+  border-radius:50%;
+  box-shadow:0 0 20px var(--cyan);
+}
+
+.node.one{
+  top:8px;
+  left:50%;
+}
+
+.node.two{
+  right:18px;
+  top:48%;
+}
+
+.node.three{
+  bottom:25px;
+  left:25%;
+}
+
+@keyframes spin{
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* SECTIONS */
+
+section{
+  padding:110px 0;
+  border-top:1px solid var(--line);
+}
+
+.section-head{
+  margin-bottom:45px;
+}
+
+.section-label{
+  color:var(--cyan);
+  font-family:monospace;
+  font-size:.78rem;
+  margin-bottom:10px;
+}
+
+h2{
+  font-size:clamp(2rem,4vw,3.4rem);
+  letter-spacing:-.05em;
+}
+
+.section-description{
+  color:var(--muted);
+  max-width:700px;
+  margin-top:14px;
+}
+
+/* ABOUT */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+.about-card{
+  padding:28px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--card);
+}
+
+.about-card p{
+  color:var(--muted);
+}
+
+.about-card strong{
+  color:var(--text);
+}
+
+/* RESEARCH */
+
+.research-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.research-card{
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:28px;
+  background:linear-gradient(145deg,#101722cc,#0b111bcc);
+  transition:.25s;
+}
+
+.research-card:hover{
+  transform:translateY(-5px);
+  border-color:#65d9ff30;
+}
+
+.research-card h3{
+  font-size:1.25rem;
+  margin-bottom:12px;
+}
+
+.research-card p{
+  color:var(--muted);
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:20px;
+}
+
+.tag{
+  font-size:.72rem;
+  font-family:monospace;
+  color:#b8c7d9;
+  border:1px solid var(--line);
+  padding:5px 8px;
+  border-radius:6px;
+}
+
+/* PROJECTS */
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  border:1px solid var(--line);
+  background:var(--card);
+  border-radius:14px;
+  padding:28px;
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  border-color:#ffffff30;
+}
+
+.num{
+  font-family:monospace;
+  color:var(--cyan);
+  font-size:.75rem;
+  margin-bottom:25px;
+}
+
+.card h3{
+  font-size:1.35rem;
+  margin-bottom:10px;
+}
+
+.tools{
+  color:var(--purple);
+  font-family:monospace;
+  font-size:.72rem;
+  margin-bottom:15px;
+}
+
+.card p{
+  color:var(--muted);
+  font-size:.92rem;
+}
+
+/* ACTIVITIES */
+
+.activity-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.activity{
+  padding:25px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#ffffff03;
+}
+
+.activity h3{
+  margin-bottom:7px;
+}
+
+.activity p{
+  color:var(--muted);
+}
+
+/* CONNECT */
+
+.connect{
+  text-align:center;
+  padding-bottom:130px;
+}
+
+.connect p{
+  color:var(--muted);
+  max-width:600px;
+  margin:15px auto 30px;
+}
+
+.socials{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid var(--line);
+  padding:30px 0;
+  color:var(--muted);
+  font-size:.8rem;
+  text-align:center;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding:80px 0;
+  }
+
+  .hero-graphic{
+    height:300px;
+  }
+
+  .about-grid,
+  .research-grid,
+  .activity-grid{
+    grid-template-columns:1fr;
+  }
+
+  .projects{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:80px 0;
+  }
+}
+</style>
+</head>
+
 <body>
-<nav class="nav"><div class="navin"><a class="brand" href="#">SAAD<b>.</b></a><div class="links"><a href="#about">About</a><a href="#research">Research</a><a href="#projects">Projects</a><a href="#activities">Activities</a><a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></div></div></nav>
 
-<header class="hero"><div><div class="eyebrow">Electrical Engineering · NJIT</div><h1>Engineering at the edge of <span>electronics.</span></h1><p>Electrical Engineering student exploring semiconductor devices, energy systems, embedded electronics, sensing, and energy-efficient engineering.</p><div class="buttons"><a class="btn primary" href="resume.pdf" target="_blank" rel="noopener noreferrer">View resume ↗</a><a class="btn" href="https://github.com/saadfarooq2007" target="_blank">GitHub ↗</a><a class="btn" href="#projects">Explore work ↓</a></div></div><div class="planet"></div></header>
+<nav>
+  <div class="container nav-inner">
 
-<section id="about"><div class="label">01 / About</div><h2>Curious about how things work.</h2><div class="grid2"><div class="card"><p>I am an Electrical Engineering student at the New Jersey Institute of Technology, building toward undergraduate research in semiconductor and energy systems while working on hands-on sensing, remote sensing, and UAV projects.</p><div class="tags"><span class="tag">Semiconductor Devices</span><span class="tag">Energy Systems</span><span class="tag">Power Electronics</span><span class="tag">Embedded Systems</span><span class="tag">Sensing</span><span class="tag">Renewable Energy</span></div></div><div class="card"><div class="label">Education</div><h3>New Jersey Institute of Technology</h3><p>B.S. Electrical Engineering · 2025–Present<br>Albert Dorman Honors College</p></div></div></section>
+    <a href="#" class="logo">
+      SAAD<span>.</span>
+    </a>
 
-<section id="research"><div class="label">02 / Research</div><h2>What I'm exploring.</h2><div class="grid2"><div class="card"><p>Independent study in semiconductor device physics, electronic materials, energy conversion, circuit analysis, electronics, and mathematical methods relevant to semiconductor and power systems research.</p></div><div class="card"><div class="skills"><div class="skill"><strong>Programming</strong><br>Python, MATLAB</div><div class="skill"><strong>Hardware</strong><br>Arduino</div><div class="skill"><strong>Engineering</strong><br>CAD, UAV Design, Data Analysis</div><div class="skill"><strong>Remote Sensing</strong><br>MODIS, TRMM, GPM</div></div></div></div></section>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#activities">Activities</a>
+      <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+    </div>
 
-<section id="projects"><div class="label">03 / Selected Work</div><h2>Projects & research.</h2><div class="cards">
+  </div>
+</nav>
 
-<article class="card project">
-<div class="num">01</div>
-<h3>FloodShield</h3>
-<div class="tools">Arduino · TRMM & GPM · Environmental Sensing</div>
-<p>Co-developed a sub-$10 waterproof Arduino flood sensor and integrated satellite rainfall data with ground sensor thresholds to assess flood-risk relationships.</p>
-</article>
 
-<article class="card project">
-<div class="num">02</div>
-<h3>Satellite-Based Flood Prediction</h3>
-<div class="tools">MODIS · Sentinel · Remote Sensing</div>
-<p>Analyzed spectral data and rainfall records to identify early flood indicators in South Asian river basins and developed a rainfall-to-flood correlation approach.</p>
+<main>
 
-<a class="btn" href="Morphing Wings.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:18px;">
-Read research paper ↗
-</a>
+<!-- HERO -->
 
-</article>
+<section class="hero">
+  <div class="container hero-grid">
 
-<article class="card project">
-<div class="num">03</div>
-<h3>Morphing Wing UAV Research</h3>
-<div class="tools">CAD · NACA Airfoils · Aerodynamics</div>
-<p>Compared servo, linear, and ball-screw actuators for morphing UAV wings across force, power, and cost metrics and modeled actuator-airfoil combinations.</p>
-</article>
+    <div>
 
-</div></section>
+      <div class="kicker">
+        ELECTRICAL ENGINEERING · NJIT
+      </div>
 
-<section id="activities"><div class="label">04 / Beyond the classroom</div><h2>Engineering in practice.</h2><div class="two"><div class="card"><h3>NJIT Baja Racing</h3><p>Electrical Team · Contributing to electrical systems for an off-road race vehicle and gaining hands-on exposure to hardware and electromechanical systems.</p></div><div class="card"><h3>NJIT Autonomous Racing Club</h3><p>Participating in robotics, autonomy, and hardware-focused engineering activities, including an IEEE Hardware Project Sprint.</p></div><div class="card"><h3>Pakistan Young Physicists Tournament</h3><p>Team Captain, 2024 · Experimental design, data analysis, scientific presentation, and competition preparation.</p></div><div class="card"><h3>International Astronomy & Physics Competition</h3><p>Pakistan Team Member · Bronze Medalist.</p></div></div></section>
+      <h1>
+        Engineering at the
+        <span>edge of electronics.</span>
+      </h1>
 
-<section><div class="card" style="text-align:center;padding:48px 26px"><div class="label">05 / Connect</div><h2>Let's build something useful.</h2><p style="max-width:620px;margin:0 auto;color:var(--muted)">Interested in undergraduate research and hands-on engineering work in semiconductors, energy systems, electronics, and sensing.</p><div class="buttons" style="justify-content:center"><a class="btn primary" href="resume.pdf" target="_blank" rel="noopener noreferrer">Read my resume ↗</a><a class="btn" href="https://github.com/saadfarooq2007" target="_blank">GitHub ↗</a></div></div></section>
+      <p class="hero-text">
+        I’m Saad Farooq, an electrical engineering student interested in
+        semiconductor devices, energy systems, robotics, and technologies
+        that turn engineering research into practical solutions.
+      </p>
 
-<footer><span>© 2026 Saad Farooq</span><span>Electrical Engineering · NJIT</span></footer>
+      <div class="hero-buttons">
+
+        <a class="btn primary" href="#research">
+          Explore research ↘
+        </a>
+
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener noreferrer">
+          View résumé ↗
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-graphic">
+
+      <div class="orbit">
+
+        <div class="node one"></div>
+        <div class="node two"></div>
+        <div class="node three"></div>
+
+      </div>
+
+      <div class="core"></div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-label">
+        01 / ABOUT
+      </div>
+
+      <h2>Building toward useful engineering.</h2>
+
+      <p class="section-description">
+        My work sits between electronics, physical systems, and environmental
+        problems. I’m especially interested in understanding how devices
+        work at the hardware level and how those devices can become part of
+        larger energy and sensing systems.
+      </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+      <div class="about-card">
+
+        <p>
+          I’m currently studying <strong>Electrical Engineering at NJIT</strong>,
+          with interests spanning semiconductor devices, energy systems,
+          embedded hardware, and computer engineering.
+        </p>
+
+      </div>
+
+
+      <div class="about-card">
+
+        <p>
+          Before college, I worked on projects involving flood sensing,
+          satellite data, UAV design, and environmental monitoring. Those
+          projects taught me to approach engineering as a combination of
+          physical hardware, data, and experimentation.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- RESEARCH -->
+
+<section id="research">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-label">
+        02 / RESEARCH
+      </div>
+
+      <h2>Questions I want to investigate.</h2>
+
+      <p class="section-description">
+        I’m currently looking for opportunities to work in semiconductor
+        devices, nanoelectronics, energy conversion, power systems, and
+        hardware research.
+      </p>
+
+    </div>
+
+
+    <div class="research-grid">
+
+      <div class="research-card">
+
+        <h3>Semiconductor Devices</h3>
+
+        <p>
+          Interested in semiconductor materials, device physics,
+          nanoscale structures, photodetectors, and emerging electronic
+          devices.
+        </p>
+
+        <div class="tags">
+          <span class="tag">DEVICE PHYSICS</span>
+          <span class="tag">NANOELECTRONICS</span>
+          <span class="tag">MATERIALS</span>
+        </div>
+
+      </div>
+
+
+      <div class="research-card">
+
+        <h3>Energy Systems</h3>
+
+        <p>
+          Interested in renewable integration, energy conversion,
+          power electronics, microgrids, and hardware that makes
+          electrical systems more efficient and resilient.
+        </p>
+
+        <div class="tags">
+          <span class="tag">POWER SYSTEMS</span>
+          <span class="tag">ENERGY</span>
+          <span class="tag">MICROGRIDS</span>
+        </div>
+
+      </div>
+
+
+      <div class="research-card">
+
+        <h3>Embedded Hardware</h3>
+
+        <p>
+          Interested in sensing systems and low-cost embedded hardware,
+          particularly where electronics interact directly with
+          real-world environments.
+        </p>
+
+        <div class="tags">
+          <span class="tag">ARDUINO</span>
+          <span class="tag">SENSORS</span>
+          <span class="tag">EMBEDDED SYSTEMS</span>
+        </div>
+
+      </div>
+
+
+      <div class="research-card">
+
+        <h3>Engineering for Climate</h3>
+
+        <p>
+          My previous work has focused on using engineering and data to
+          understand environmental problems, especially flooding and
+          climate resilience.
+        </p>
+
+        <div class="tags">
+          <span class="tag">REMOTE SENSING</span>
+          <span class="tag">DATA</span>
+          <span class="tag">RESILIENCE</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-label">
+        03 / PROJECTS
+      </div>
+
+      <h2>Things I've built and investigated.</h2>
+
+      <p class="section-description">
+        A selection of engineering projects and research work from before
+        and during my transition into electrical engineering.
+      </p>
+
+    </div>
+
+
+    <div class="projects">
+
+
+      <!-- PROJECT 01 -->
+
+      <article class="card project">
+
+        <div class="num">
+          01
+        </div>
+
+        <h3>
+          FloodShield
+        </h3>
+
+        <div class="tools">
+          Arduino · Sensors · NASA Data
+        </div>
+
+        <p>
+          Developed a low-cost waterproof flood early-warning sensor
+          system under $10, combining ground-level measurements with
+          NASA TRMM and GPM rainfall data for flood-risk monitoring.
+        </p>
+
+      </article>
+
+
+      <!-- PROJECT 02 -->
+
+      <article class="card project">
+
+        <div class="num">
+          02
+        </div>
+
+        <h3>
+          Satellite-Based Flood Prediction
+        </h3>
+
+        <div class="tools">
+          MODIS · Sentinel · Remote Sensing
+        </div>
+
+        <p>
+          Investigated satellite spectral data and rainfall patterns
+          to study relationships between environmental changes and
+          local flooding, with a focus on improving early-warning
+          approaches.
+        </p>
+
+      </article>
+
+
+      <!-- PROJECT 03 -->
+
+      <article class="card project">
+
+        <div class="num">
+          03
+        </div>
+
+        <h3>
+          Morphing Wing UAV Research
+        </h3>
+
+        <div class="tools">
+          CAD · NACA Airfoils · Aerodynamics
+        </div>
+
+        <p>
+          Compared servo, linear, and ball-screw actuators for morphing
+          UAV wings across force, power, and cost metrics and modeled
+          actuator-airfoil combinations.
+        </p>
+
+        <a
+          class="btn"
+          href="Morphing Wings.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="display:inline-block;margin-top:18px;"
+        >
+          Read research paper ↗
+        </a>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ACTIVITIES -->
+
+<section id="activities">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-label">
+        04 / ACTIVITIES
+      </div>
+
+      <h2>Engineering beyond the classroom.</h2>
+
+    </div>
+
+
+    <div class="activity-grid">
+
+
+      <div class="activity">
+
+        <h3>
+          Pakistan Young Physicist Tournament
+        </h3>
+
+        <p>
+          Team captain and competitor in physics problem solving and
+          experimental challenges.
+        </p>
+
+      </div>
+
+
+      <div class="activity">
+
+        <h3>
+          Environment Society
+        </h3>
+
+        <p>
+          Led environmental initiatives and projects involving
+          sustainability, awareness, and community participation.
+        </p>
+
+      </div>
+
+
+      <div class="activity">
+
+        <h3>
+          International Astronomy & Physics Competition
+        </h3>
+
+        <p>
+          Pakistan team member and Bronze Medal recipient.
+        </p>
+
+      </div>
+
+
+      <div class="activity">
+
+        <h3>
+          Robotics & Engineering
+        </h3>
+
+        <p>
+          Built and experimented with Arduino-based systems,
+          robotics projects, and engineering prototypes.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONNECT -->
+
+<section class="connect">
+
+  <div class="container">
+
+    <div class="section-label">
+      05 / CONNECT
+    </div>
+
+    <h2>Let's build something useful.</h2>
+
+    <p>
+      I'm always interested in research opportunities, engineering
+      projects, and conversations about hardware, energy, and emerging
+      technologies.
+    </p>
+
+
+    <div class="socials">
+
+      <a
+        class="btn"
+        href="mailto:saad.farooqf7@gmail.com"
+      >
+        Email
+      </a>
+
+      <a
+        class="btn"
+        href="https://github.com/saadfarooq2007"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub ↗
+      </a>
+
+      <a
+        class="btn"
+        href="resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Résumé ↗
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  © 2026 Saad Farooq · Electrical Engineering · NJIT
+
+</footer>
+
+
 </body>
 </html>
